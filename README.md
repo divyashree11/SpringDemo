@@ -6,4 +6,4 @@ This repo consists of simple demo projects of spring implementation using variou
 
 2)spring-java : It consists of Java based spring project with simple service and repository without any DB configuration.
 
-3)2)spring-annotation : It consists of annotations based spring project with simple service and repository without any DB configuration.
+3)spring-annotation : It consists of annotations based spring project with simple service and repository without any DB configuration.
