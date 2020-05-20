@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xml namespace for spring beans -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="userDetailsRepo" class="com.spring.demo.repository.UserDetailsRepositoryImpl">
+	</bean>
+	
+	<!-- Autowire byname : use setter injection to get all dependencies(use same name as bean name in setter function -->
+	<!-- <bean name="userService" class="com.spring.demo.service.UserDetailsServiceImpl" autowire="byType">
+	</bean> -->
+	
+	<!-- Autowire constructor : uses constructor injection to get all dependencies -->
+	<bean name="userService" class="com.spring.demo.service.UserDetailsServiceImpl">
+		<constructor-arg index="0" ref="userDetailsRepo"/>
+	</bean>
+
+</beans>
